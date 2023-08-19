@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: beige;
+    flex-direction: column;
+    #info {
+        margin-top: 20px;
+        font-size: 32px;
+    }
+    #gameboard {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        padding: 10px;
+        box-shadow: 4px 9px 3px brown;
+        background-color: burlywood;
+        .square {
+            width: 100px;
+            height: 100px;
+            border: 1px solid grey;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: bisque;
+            .circle {
+                width: 90px;
+                height: 90px;
+                border: 10px solid black;
+                border-radius: 50%;
+                box-sizing: border-box;
+            }
+            .cross {
+                position: relative;
+                height: 90px;
+                width: 90px;
+                &::before, &::after {
+                    position: absolute;
+                    content: "";
+                    left: 50%;
+                    width: 30%;
+                    margin-left: -15px;
+                    height: 100%;
+                    background-color: red;
+                }
+                &::before {
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    
+
+    
+
+    
+}
+
